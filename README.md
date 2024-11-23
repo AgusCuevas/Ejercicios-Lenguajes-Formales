@@ -112,50 +112,6 @@ D -> eDe | fDf | ee | ff
 
 -------------------------------------------------
 
-- Diséñese AP por vaciado de pila para L = {a^n b^m c^k / n, m , k >= 0; k + m = n v k + n = m}
-
-#### Solucion
-
-caso 1: n,m,k >= 0; k + m = n
-L = {a^k a^m b^m c^k / m,k >= 0}
-
-S -> λ | aAc | aBb | ac | ab
-A -> aAc | ac | aBc
-B -> aBb | ab
-
-caso 2: n,m,k >= 0; k + n = m
-L = {a^n b^n b^k c^k / n,k >= 0}
-
-S -> λ | aCbD | abD | ab | bc | aCb | bDc
-C -> aCb | ab
-D -> bDc | bc
-
-S -> λ | aAc | aBb | ac | ab | aCbD | abD | bc | aCb | bDc
-A -> aAc | ac | aBc
-B -> aBb | ab
-C -> aCb | ab
-D -> bDc | bc 
-
-FNG:
-S -> λ | aAZ | aBY | aZ | aY | aCYD | aYD | bZ | aCY | bDZ
-A -> aAZ | aZ | aBZ
-B -> aBY | aY
-C -> aCY | aY
-D -> bDZ | bZ
-Y -> b
-Z -> c
-
-AP
-Q = {q0}
-F = {}
-Σ = {a, b, c}
-q0 = q0
-p = S
-Γ = {A, Z, B, Y, C, D, S}
-δ(q0, λ, S) = (q0, λ)
-δ(q0, a, S) = (q0, AZ)
-δ(q0, a, S) = (q0, BY)
-...
 
 -------------------------------------------------
 
@@ -177,6 +133,50 @@ Z -> b | bZ | bZZ
 
 -------------------------------------------------
 
+- Diséñese AP por vaciado de pila para L = {a^n b^m c^k / n, m , k >= 0; k + m = n v k + n = m}
+
+#### Solucion
+
+caso 1: n,m,k >= 0; k + m = n \
+L = {a^k a^m b^m c^k / m,k >= 0} \
+
+S -> λ | aAc | aBb | ac | ab \
+A -> aAc | ac | aBc \
+B -> aBb | ab
+
+caso 2: n,m,k >= 0; k + n = m \
+L = {a^n b^n b^k c^k / n,k >= 0}
+
+S -> λ | aCbD | abD | ab | bc | aCb | bDc \
+C -> aCb | ab \
+D -> bDc | bc
+
+S -> λ | aAc | aBb | ac | ab | aCbD | abD | bc | aCb | bDc \
+A -> aAc | ac | aBc \
+B -> aBb | ab \
+C -> aCb | ab \
+D -> bDc | bc 
+
+FNG: \
+S -> λ | aAZ | aBY | aZ | aY | aCYD | aYD | bZ | aCY | bDZ \
+A -> aAZ | aZ | aBZ \
+B -> aBY | aY \
+C -> aCY | aY \
+D -> bDZ | bZ \
+Y -> b \
+Z -> c \
+
+AP \
+Q = {q0} \
+F = {} \
+Σ = {a, b, c} \
+q0 = q0 \
+p = S \
+Γ = {A, Z, B, Y, C, D, S} \
+δ(q0, λ, S) = (q0, λ) \
+δ(q0, a, S) = (q0, AZ) \
+δ(q0, a, S) = (q0, BY) \ 
+...
 
 
 -------------------------------------------------
