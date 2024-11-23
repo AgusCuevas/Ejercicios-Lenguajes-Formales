@@ -19,7 +19,7 @@ B -> aBb | Bb | abb
 
 - Diséñese una GIC para L = {[], [id], [id,id], [id,id,id], ...}
 #### Solucion
-S -> [A] \
+S -> [A] | [] \
 A -> idBA | id \
 B -> ,
 
